@@ -1,4 +1,4 @@
-# WeGO Foundation Website
+# WeGo Foundation Website
 
 #### Mike Eberle
 #### Tim Kutcher
