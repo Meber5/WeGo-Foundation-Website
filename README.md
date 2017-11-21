@@ -1,5 +1,5 @@
-## WeGO Foundation Website
+# WeGO Foundation Website
 
-# Mike Eberle
-# Tim Kutcher
-# 2017
+#### Mike Eberle
+#### Tim Kutcher
+##### 2017
