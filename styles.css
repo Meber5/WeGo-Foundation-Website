@@ -1,9 +1,30 @@
+
 #main-container {
   margin-top: 1%;
+}
+
+#contact-bar {
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 8%;
 }
 
 .spacer {
   margin-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.blue {
+  background-color: #337Ab7;
+}
+
+.green {
+  background-color: #70AD47;
 }
