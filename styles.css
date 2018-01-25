@@ -4,11 +4,29 @@ body {
 
 #main-container {
   margin-top: 1%;
+  padding-bottom: 14%;
 }
 
 #wegoheader {
   display: flex;
   justify-content: center;
+}
+
+.image-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.science-text {
+  width: 40%;
 }
 
 .tab-content {
@@ -19,7 +37,8 @@ body {
 
 #contact-bar {
   padding-top: 10px;
-  position: absolute;
+  margin-top: 10px;
+  position: fixed;
   bottom: 0;
   left: 0;
   display: flex;
@@ -27,10 +46,11 @@ body {
   align-items: center;
   color: white;
   height: 12%;
+  width: 100%;
 }
 
 .spacer {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -41,4 +61,15 @@ body {
 
 .green {
   background-color: #70AD47;
+}
+
+#center-stage-picture {
+  transform: rotate(90deg);
+}
+
+.side-to-side-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
