@@ -10,9 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <script type="text/javascript">
-  function sub() {
-    alert("woo");
-    
+  function sub(a, b, c, d) {
+    alert("woo" + a + " " + b + " " + c + " " + d);
   }
 </script>
 <body>
@@ -68,21 +67,21 @@
               <form>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="John Doe">
+                  <input type="text" class="form-control" name="nam" placeholder="John Doe">
                 </div>
                 <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="text" class="form-control" id="email" placeholder="John@Doe.com">
+                  <input type="text" class="form-control" name="email" placeholder="John@Doe.com">
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="text" class="form-control" id="phone" placeholder="(123) 456-7890">
+                  <input type="text" class="form-control" name="phone" placeholder="(123) 456-7890">
                 </div>
                 <div class="form-group">
                   <label for="comment">Comments</label>
-                  <textarea class="form-control" id="comments" rows="3"></textarea>
+                  <textarea class="form-control" name="comments" rows="3"></textarea>
                 </div>
-                <button onclick="sub()" class="btn btn-primary">Submit</button>
+                <button onclick="sub(nam.value, email.value, phone.value, comments.value)" class="btn btn-primary">Submit</button>
               </form>
             </div>
             <img src="./pictures/3178.jpg" height=40% width=40%>
