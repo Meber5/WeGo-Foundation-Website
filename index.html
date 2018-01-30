@@ -10,10 +10,41 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <script type="text/javascript">
-  function sub(a, b, c, d) {
-    alert("woo" + a + " " + b + " " + c + " " + d);
+  /*$(document).ready(() => {
+    document.getElementById("submit").on("click", function(event) {
+       document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
+       event.preventDefault();
+    }, false);
+  )*/
+
+  function sub() {
+
+
+    var name = document.getElementById("nam").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var comments = document.getElementById("comments").value;
+
+    var body = {
+      name: name,
+      phone: phone,
+      email: email,
+      comments: comments
+    };
+
+    console.log(body);
+
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000",
+      data: body
+    })
+    return false
   }
+
+
 </script>
+
 <body>
     <div class="container-fluid" id="main-container">
       <ul class="nav nav-pills nav-justified">
@@ -67,21 +98,21 @@
               <form>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" name="nam" placeholder="John Doe">
+                  <input type="text" class="form-control" id="nam" placeholder="John Doe">
                 </div>
                 <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="text" class="form-control" name="email" placeholder="John@Doe.com">
+                  <input type="text" class="form-control" id="email" placeholder="John@Doe.com">
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="text" class="form-control" name="phone" placeholder="(123) 456-7890">
+                  <input type="text" class="form-control" id="phone" placeholder="(123) 456-7890">
                 </div>
                 <div class="form-group">
                   <label for="comment">Comments</label>
-                  <textarea class="form-control" name="comments" rows="3"></textarea>
+                  <textarea class="form-control" id="comments" rows="3"></textarea>
                 </div>
-                <button onclick="sub(nam.value, email.value, phone.value, comments.value)" class="btn btn-primary">Submit</button>
+                <div onclick="sub()" id="submit" class="btn btn-primary">Submit</div>
               </form>
             </div>
             <img src="./pictures/3178.jpg" height=40% width=40%>
