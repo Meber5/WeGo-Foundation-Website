@@ -49,6 +49,11 @@ body {
   width: 100%;
 }
 
+#form-message {
+  display: flex;
+  justify-content: center;
+}
+
 .spacer {
   margin-top: 2%;
   margin-left: 10%;
