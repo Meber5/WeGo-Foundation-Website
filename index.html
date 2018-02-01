@@ -18,8 +18,6 @@
   )*/
 
   function sub() {
-
-
     var name = document.getElementById("nam").value;
     var phone = document.getElementById("phone").value;
     var email = document.getElementById("email").value;
@@ -39,6 +37,14 @@
       url: "http://localhost:3000",
       data: body
     })
+    
+    document.getElementById("nam").val('');
+    document.getElementById("phone").val('');
+    document.getElementById("email").val('');
+    document.getElementById("comments").val('');
+
+
+    alert("Thank you for your submission.")
     return false
   }
 
