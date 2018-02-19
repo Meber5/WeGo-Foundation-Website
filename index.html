@@ -10,32 +10,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <script type="text/javascript">
-  /*$(document).ready(() => {
-    document.getElementById("submit").on("click", function(event) {
-       document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-       event.preventDefault();
-    }, false);
-  )*/
-
   function sub() {
     var name = document.getElementById("nam").value;
     var phone = document.getElementById("phone").value;
     var email = document.getElementById("email").value;
     var comments = document.getElementById("comments").value;
 
-    var body = {
-      name: name,
-      phone: phone,
-      email: email,
-      comments: comments
-    };
-
     console.log(body);
 
-    $.ajax({
-      type: "POST",
-      url: "https://hidden-escarpment-52858.herokuapp.com/",
-      data: body
+    fetch('https://hidden-escarpment-52858.herokuapp.com/', {
+      method: 'POST',
+      headers: {
+        "Content-Type":"application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        email: email,
+        comments: comments
+      })
     })
 
     $("#nam").val('');
