@@ -17,20 +17,54 @@
     var comments = document.getElementById("comments").value;
 
     //console.log(body);
+    // const express = require('express');
+    // const bodyParser = require('body-parser');
+    // const mongoose = require('mongoose');
+    // const session = require('express-session');
+    // const app = express();
 
-    fetch('https://wego-server.herokuapp.com/', {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        "Content-Type":"application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        phone: phone,
-        email: email,
-        comments: comments
-      })
+    mongoose.connect(process.env.MONGODB_URI);
+
+    var Schema = mongoose.Schema;
+
+    var resultSchema = new Schema({
+      name: String,
+      phone: String,
+      email: String,
+      comments: String,
     })
+
+    var Result = mongoose.model('Result', resultSchema);
+
+    var n = new Result({
+      name: name,
+      phone: phone,
+      email: email,
+      comments: comments
+    })
+
+    n.save((err, n) => {
+      if(err) {
+        console.log(err);
+      } else {
+        console.log(n);
+      }
+    })
+
+
+    // fetch('https://wego-server.herokuapp.com/', {
+    //   method: 'POST',
+    //   mode: 'no-cors',
+    //   headers: {
+    //     "Content-Type":"application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     name: name,
+    //     phone: phone,
+    //     email: email,
+    //     comments: comments
+    //   })
+    // })
 
     $("#nam").val('');
     $("#phone").val('');
