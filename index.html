@@ -22,6 +22,9 @@
 
     fetch('https://api.sendgrid.com/v3/mail/send', {
       method: 'POST',
+      headers: {
+        "Content-Type":"application/json",
+      },
       body: {
         "personalizations": [
           {
