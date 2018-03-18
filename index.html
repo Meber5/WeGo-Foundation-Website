@@ -16,21 +16,48 @@
     var email = document.getElementById("email").value;
     var comments = document.getElementById("comments").value;
 
+    var input = "Name: " + name + "\nPhone: " + phone + "\nEmail: " + email + "\nComments: " + comments;
+
     //console.log(body);
 
-    fetch('https://wego-server.herokuapp.com/', {
+    fetch('https://api.sendgrid.com/v3/mail/send', {
       method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        "Content-Type":"application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        phone: phone,
-        email: email,
-        comments: comments
-      })
-    })
+      body: {
+        "personalizations": [
+          {
+            "to": [
+              {
+                "email": "WeGoFoundation@gmail.com"
+              }
+            ],
+            "subject": "Form Submission"
+          }
+        ],
+        "from": {
+          "email": "eberle.michael97@gmail.com"
+        },
+        "content": [
+          {
+            "type": "text/plain",
+            "value": input
+          }
+        ]
+      }
+    }
+
+    // fetch('https://wego-server.herokuapp.com/', {
+    //   method: 'POST',
+    //   mode: 'no-cors',
+    //   headers: {
+    //     "Content-Type":"application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     name: name,
+    //     phone: phone,
+    //     email: email,
+    //     comments: comments
+    //   })
+    // })
 
     $("#nam").val('');
     $("#phone").val('');
