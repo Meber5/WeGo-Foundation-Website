@@ -9,74 +9,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
   function sub() {
     var name = document.getElementById("nam").value;
     var phone = document.getElementById("phone").value;
     var email = document.getElementById("email").value;
     var comments = document.getElementById("comments").value;
 
-    var input = "Name: " + name + "\nPhone: " + phone + "\nEmail: " + email + "\nComments: " + comments;
-
-    //console.log(body);
-
-    fetch('https://api.sendgrid.com/v3/mail/send', {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        "Authorization": "Bearer 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",
-        "Content-Type":"application/json"
-      },
-      body: {
-        "personalizations": [
-          {
-            "to": [
-              {
-                "email": "WeGoFoundation@gmail.com"
-              }
-            ],
-            "subject": "Form Submission"
-          }
-        ],
-        "from": {
-          "email": "eberle.michael97@gmail.com"
-        },
-        "content": [
-          {
-            "type": "text/plain",
-            "value": input
-          }
-        ]
-      }
-    });
-
-    // fetch('https://wego-server.herokuapp.com/', {
-    //   method: 'POST',
-    //   mode: 'no-cors',
-    //   headers: {
-    //     "Content-Type":"application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     name: name,
-    //     phone: phone,
-    //     email: email,
-    //     comments: comments
-    //   })
-    // })
-
     $("#nam").val('');
     $("#phone").val('');
     $("#email").val('');
     $("#comments").val('');
-
-
-    alert("Sorry!  This form is not fully functional yet.  Please email us at WeGoFoundation@gmail.com.")
-    return false
-  } -->
-
-
+    alert("Thank you for your submission!");
+    return false;
+  }
 </script>
-
 <body>
     <div class="container-fluid" id="main-container">
       <ul class="nav nav-pills nav-justified">
@@ -133,7 +80,7 @@
                 </div>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" name="Name" placeholder="John Doe">
+                  <input type="text" class="form-control" name="Name" id="nam" placeholder="John Doe">
                 </div>
                 <div class="form-group">
                   <label for="email">Email address</label>
@@ -141,11 +88,11 @@
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="text" class="form-control" name="Phone Number" placeholder="(123) 456-7890">
+                  <input type="text" class="form-control" name="Phone Number" id="phone" placeholder="(123) 456-7890">
                 </div>
                 <div class="form-group">
                   <label for="comment">Comments</label>
-                  <textarea class="form-control" name="Comments" rows="3"></textarea>
+                  <textarea class="form-control" name="Comments" id="comments" rows="3"></textarea>
                 </div>
                 <input type="submit" value="Submit">
               </form>
