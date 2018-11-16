@@ -1,180 +1,848 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WeGo Foundation</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<script type="text/javascript">
-  function sub() {
-    var name = document.getElementById("nam").value;
-    var phone = document.getElementById("phone").value;
-    var email = document.getElementById("email").value;
-    var comments = document.getElementById("comments").value;
 
-    $("#nam").val('');
-    $("#phone").val('');
-    $("#email").val('');
-    $("#comments").val('');
-    alert("Thank you for your submission!");
-    return false;
-  }
-</script>
-<body>
-    <div class="container-fluid" id="main-container">
-      <ul class="nav nav-pills nav-justified">
-        <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">What is WeGo?
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a data-toggle="pill" href="#mission">Mission</a></li>
-              <li><a data-toggle="pill" href="#history">History</a></li>
-              <li><a data-toggle="pill" href="#telepresence">Telepresence</a></li>
-              <li><a data-toggle="pill" href="#team">The Team</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Our Work
-              <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a data-toggle="pill" href="#aqua">National Aquarium</a></li>
-                <li><a data-toggle="pill" href="#msc">Maryland Science Center</a></li>
-                <li><a data-toggle="pill" href="#bcs">Baltimore Center Stage</a></li>
-              </ul>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WeGo Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+ <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">WeGo Project</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">About</a>
             </li>
-        <li><a data-toggle="pill" href="#menu3">Get Involved</a></li>
-        <li><a href="https://www.strongcitybaltimore.org/donations/wego-foundation/">Donate</a></li>
-      </ul>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#ourwork">Our Work</a>
+            </li>
+            <!--
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>-->
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Get Involved</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://www.strongcitybaltimore.org/donations/wego-foundation/" target="_blank" style="font-weight:800;color:red;">Donate</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+</nav>
+    <!-- Navigation 
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">WeGo Project</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#ourwork">Our Work</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Get Involved</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="https://www.strongcitybaltimore.org/donations/wego-foundation/" target="_blank" style="font-weight:800;color:red;">Donate</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+-->
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Welcome To the WeGo Project!</div>
+          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services" id="tellmemore">Tell Me More</a>
+        </div>
+      </div>
+    </header>
 
-      <div class="tab-content spacer">
-        <div id="home" class="tab-pane fade in active">
-          <h1 id="wegoheader"> WeGo Foundation </h1>
-          <h3>What is WeGo?</h3>
-          <p>Our mission is to create opportunities for enrichment, enjoyment, and communication to our clients, through the implementation of telepresence technology and programming. Additionally, we hope to promote innovation for new and profound avenues of human connection.</p>
-          <h3>Our Work</h3>
-          <p>WeGo currently connects inpatient pediatric patients with three local Baltimore attractions - the NA, Maryland Science Center, and Baltimore Center Stage - through telepresence visits. Our program not only strengthens the Baltimore community by creating new connections, but also improves the inpatient experience by positively impacting the children involved. We aim to achieve normalization through socialization, by combating social and psychological obstacles linked to hospitals and illness. With WeGo, pediatric patients gain independence from their medical treatments and transcend the physical boundaries of their inpatient experience. Concurrently, we believe that utilizing technology to create a more united and connected community will strengthen the bonds between institutions in Baltimore, and will break down social barriers for populations such as children at JHCC.</p>
-          <div class="image-center">
-            <img src="./pictures/3260.jpg" height=40% width=40%>
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Who We Are?</h2>
+            <h3 class="section-subheading text-muted">Our mission is to create opportunities for enrichment, enjoyment, and communication to our clients, through the implementation of telepresence technology and programming. Additionally, we hope to promote innovation for new and profound avenues of human connection.</h3>
           </div>
         </div>
-        <div id="#menu1" class="tab-pane fade">
-          <h3>What is WeGo?</h3>
-          <p>Some content in menu 1.</p>
+        <div class="row text-center">
+       
+          <div class="col-md-12">
+          <img src="img/aquarium.jpg" height="500px" >
+            <p class="text-muted" style="padding-top:15px;">WeGo currently connects inpatient pediatric patients with three local Baltimore attractions - the NA, Maryland Science Center, and Baltimore Center Stage - through telepresence visits. Our program not only strengthens the Baltimore community by creating new connections, but also improves the inpatient experience by positively impacting the children involved. We aim to achieve normalization through socialization, by combating social and psychological obstacles linked to hospitals and illness. With WeGo, pediatric patients gain independence from their medical treatments and transcend the physical boundaries of their inpatient experience. Concurrently, we believe that utilizing technology to create a more united and connected community will strengthen the bonds between institutions in Baltimore, and will break down social barriers for populations such as children at JHCC</p>
+          </div>
         </div>
-        <div id="menu2" class="tab-pane fade">
-          <h3>Our Work</h3>
-          <p>What goes here??</p>
+          <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">What is Telepresence?</h2>
+          </div>
         </div>
-        <div id="menu3" class="tab-pane fade">
-          <h3>Get Involved</h3>
-          <div class="image-right">
-            <div class="science-text">
-              <form action="https://formspree.io/WeGoFoundation@gmail.com" method="POST">
+         <div class="row text-center">
+          <div class="col-md-12">
+          
+            <p class="text-muted">A telepresence robot connects a person to a location through the internet. The robot can explore a location in a way that the operator can see, hear, talk and move around as if they are physically there. Robots like this are used in healthcare, education and business for a variety of purposes.
+
+VGo is one of many manufacturers in the telepresence robotics field, and is the model provided to NA free of charge during the pilot. VGo is about 4 feet tall and the base is one square foot. It weighs less than 20 pounds. It has navigation lights at the base as well as on the top camera. It doesn’t move faster than walking speed and has an auto-stop sensor when the wheels bump against an object, such as a foot or exhibit.</p>
+          </div>
+         </div>
+      </div>
+    </section>
+    
+       <!-- Our Work -->
+    <section id="ourwork">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Our Work</h2>
+            <h3 class="section-subheading text-muted">We have teamed with multiple organizations to bring enrichment, enjoyment, and communication to our clients</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            
+              <img src="img/nataquariumlogo.jpg" width="200px" height="200px" alt="" >
+         
+            <h4 class="service-heading">National Aquarium</h4>
+            <p class="text-muted">Since its founding 1981, the National Aquarium has educated generations of Maryland families. The aquarium is committed to the education and inspiration of Maryland school children, educating over 100,000 local Maryland children a year. The non-profit aquarium’s dedication to Maryland families and children aligns with the WeGo Foundation’s mission for enriching the lives of pediatric inpatients in the Baltimore area. This alignment has furthered the partnership between the two organizations, leading to the development of telepresence tours and programs for children at the Johns Hopkins Children's Center.
+            </p>
+          </div>
+          <div class="col-md-4">
+             <img src="img/sciencecenter.png" width="360px" height="200px" alt="" >
+            <h4 class="service-heading">Maryland Science Center</h4>
+            <p class="text-muted">Founded in 1976, the Maryland Science Center continues to be an educational and inspirational hub for science, technology, engineering, and mathematics (STEM). Located in the Inner Harbor of Baltimore with an array of interactive demos, hands-on exhibits, and films in it’s IMAX theater, the center never fails to keep families and kids engaged. The center’s commitment to educating the youth of Baltimore and demonstrating the power of the sciences provides a unique opportunity for WeGo Foundation’s clients: to enjoy and to learn, all in one unique telepresence tour at the Maryland Science Center.
+            </p>
+          </div>
+          <div class="col-md-4">
+          <img src="img/bsc.png" width="200px" height="200px" alt="" >
+            <h4 class="service-heading">Baltimore Center Stage</h4>
+            <p class="text-muted">Launched in 1963 and located in the Mount Vernon Cultural District of Baltimore, Baltimore Center Stage has grown to become Baltimore’s premier and largest professional producing theater. The theatre group offers multiple plays and events, including a family series, however these programs only scratch the surface of the group’s amazing efforts in educating children. Programs such as the Young Playwrights Festival, Drama Club, and the Student Matinee series demonstrate the group’s dedication for inspiring imagination, creativity, and a passion for the arts among Baltimore’s youth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Portfolio Grid 
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Portfolio</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Threads</h4>
+              <p class="text-muted">Illustration</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Explore</h4>
+              <p class="text-muted">Graphic Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Finish</h4>
+              <p class="text-muted">Identity</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Lines</h4>
+              <p class="text-muted">Branding</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Southwest</h4>
+              <p class="text-muted">Website Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Window</h4>
+              <p class="text-muted">Photography</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- About 
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">About</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2009-2011</h4>
+                    <h4 class="subheading">Our Humble Beginnings</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>March 2011</h4>
+                    <h4 class="subheading">An Agency is Born</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>December 2012</h4>
+                    <h4 class="subheading">Transition to Full Service</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>July 2014</h4>
+                    <h4 class="subheading">Phase Two Expansion</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>Be Part
+                    <br>Of Our
+                    <br>Story!</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Team -->
+    <section class="bg-light" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+           <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
+          </div>
+        </div>
+        <div class="row">
+          
+          <!-- Galen --> 
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+              <h4>Galen Shi</h4>
+              <p class="text-muted">Executive Director</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Matthew -->
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/4.jpg" alt="">
+              <h4>Matthew Tam</h4>
+              <p class="text-muted">Outreach Coordinator</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Ian-->
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/5.jpg" alt="">
+              <h4>Ian Dwyer</h4>
+              <p class="text-muted">Program Manager</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Tommy -->
+           <div class="col-sm-6">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/2.jpeg" alt="">
+              <h4>Thomas Mee</h4>
+              <p class="text-muted">Administrative Coordinator</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+           <!--Bradley-->
+            <div class="col-sm-6">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+              <h4>Bradley Parsonsr</h4>
+              <p class="text-muted">Volunteer Coordinator</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+       <!-- <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+          </div>
+        </div>-->
+      </div>
+    </section>
+
+    <!-- Clients 
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Get Involved</h2>
+            <h3 class="section-subheading text-muted">Please fill out the form, and we will contact you shortly</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form action="https://formspree.io/WeGoFoundation@gmail.com" method="POST">
                 <div id="form-message">
                   <p>Please fill out the form, and we will contact you shortly.</p>
                 </div>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" name="Name" id="nam" placeholder="John Doe">
+                  <input type="text" class="form-control" name="Name" id="nam" placeholder="Name">
                 </div>
                 <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="email" name="_replyto" class="form-control" id="email" placeholder="John@Doe.com">
+                  <input type="email" name="_replyto" class="form-control" id="email" placeholder="Email">
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="text" class="form-control" name="Phone Number" id="phone" placeholder="(123) 456-7890">
+                  <input type="text" class="form-control" name="Phone Number" id="phone" placeholder="Phone Number">
                 </div>
                 <div class="form-group">
                   <label for="comment">Comments</label>
-                  <textarea class="form-control" name="Comments" id="comments" rows="3"></textarea>
+                  <textarea class="form-control" name="Comments" id="comments" rows="3" placeholder="Additional Comments"></textarea>
                 </div>
-                <input type="submit" value="Submit">
+                <div style="text-align:center;">
+                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Submit</button>
+                </div>
               </form>
-            </div>
-            <img src="./pictures/3178.jpg" height=40% width=40%>
-          </div>
-        </div>
-        <div id="mission" class="tab-pane fade">
-          <h3>Mission & Vision</h3>
-          <p>Our mission is to create opportunities for enrichment, enjoyment, and communication to our clients, through the implementation of telepresence technology and programming. Additionally, we hope to promote innovation for new and profound avenues of human connection.</p>
-          <div class="side-to-side-images">
-            <img src="./pictures/3280.jpg" width=20% height=20%>
-            <img src="./pictures/6438.JPG" width=20% height=20%>
-          </div>
-        </div>
-        <div id="history" class="tab-pane fade">
-          <h3>History</h3>
-            <div class="image-right">
-              <div class="science-text">
-                <p>The WeGo Foundation began in early 2016, when Galen Shi initiated a partnership between the National Aquarium and Johns Hopkins Children’s Center in order to establish a pediatric telepresence program. By early 2017, approval was obtained on both sides of the partnership and a pilot program was launched. The pilot was a major success, garnering exceptional reviews from users, families, and staff from both the National Aquarium and Johns Hopkins Children’s Center. This exposure led to new opportunities and additional partnerships with the Maryland Science Center and Baltimore Center Stage.</p>
-              </div>
-            <img src="./pictures/team.jpeg" height=40% width=40%>
-          </div>
-        </div>
-        <div id="telepresence" class="tab-pane fade">
-          <h3>Telepresence</h3>
-          <div class="image-right">
-            <div class="science-text">
-              <p>A telepresence robot connects a person to a location through the internet.  The robot can explore a location in a way that the operator can see, hear, talk and move around as if they are physically there. Robots like this are used in healthcare, education and business for a variety of purposes.</p>
-              <p>VGo is one of many manufacturers in the telepresence robotics field, and is the model provided to NA free of charge during the pilot. VGo is about 4 feet tall and the base is one square foot. It weighs less than 20 pounds. It has navigation lights at the base as well as on the top camera. It doesn’t move faster than walking speed and has an auto-stop sensor when the wheels bump against an object, such as a foot or
-              exhibit.</p>
-            </div>
-            <img src="./pictures/3248.jpg" height=20% width=20%>
-          </div>
-        </div>
-        <div id="team" class="tab-pane fade">
-          <h3>The Team</h3>
-          <br>
-          <ul>
-            <li>Galen Shi is a graduate of Johns Hopkins University with a B.A. in Public Health Studies. He is currently the Executive Director, responsible for the overseeing administration, programs, and strategic planning in order to support and achieve WeGo’s mission.</li>
-            <br>
-            <li>Matthew Tam is a graduate of Johns Hopkins University with a B.A. in Public Health Studies; he is currently the Outreach Coordinator, in charge of the strategic expansion and communication of WeGo’s working policies. </li>
-            <br>
-            <li>Ian Dwyer is a graduate of Virginia Polytechnic Institute and State University with a B.S. in Biochemistry; he is currently the Program Manager, in charge of implementing and maintaining projects that uphold and strengthen WeGo’s mission.</li>
-            <br>
-            <li>Thomas Mee is a graduate of Johns Hopkins University with a B.A. in Public Health Studies. He is currently the Administrative Coordinator, in charge of ensuring fluid integration of the missions of WeGo into the nonprofit model of service.</li>
-            <br>
-            <li>Bradley Parsons is currently a sophomore at Johns Hopkins University majoring in Public Health Studies. He is currently the Volunteer Coordinator, in charge of making connections with various groups around the Johns Hopkins campus and recruiting volunteers to facilitate inpatient visits.</li>
-          </ul>
-        </div>
-        <div id="aqua" class="tab-pane fade">
-          <h3>National Aquarium</h3>
-          <div class="image-right">
-            <div class="science-text">
-              <p>Since its founding 1981, the National Aquarium has educated generations of Maryland families. Located in the Inner Harbor of Baltimore, the aquarium is committed to the education and inspiration of Maryland school children, educating over 100,000 local Maryland children a year. The non-profit aquarium’s dedication to Maryland families and children aligns with the WeGo Foundation’s mission for enriching the lives of pediatric inpatients in the Baltimore area. This alignment has furthered the partnership between the two organizations, leading to the development of telepresence tours and programs for children at the Johns Hopkins Children's Center.</p>
-            </div>
-            <img src="./pictures/3223.jpg" height=40% width=40%>
-          </div>
-        </div>
-        <div id="msc" class="tab-pane fade">
-          <h3>Maryland Science Center</h3>
-          <div class="image-right">
-            <div class="science-text">
-              <p>Founded in 1976, the Maryland Science Center continues to be an educational and inspirational hub for science, technology, engineering, and mathematics (STEM). Located in the Inner Harbor of Baltimore with an array of interactive demos, hands-on exhibits, and films in it’s IMAX theater, the center never fails to keep families and kids engaged. The center’s commitment to educating the youth of Baltimore and demonstrating the power of the sciences provides a unique opportunity for WeGo Foundation’s clients: to enjoy and to learn, all in one unique telepresence tour at the Maryland Science Center.</p>
-            </div>
-            <img src="./pictures/3197.jpg" height=20% width=20%>
-          </div>
-        </div>
-        <div id="bcs" class="tab-pane fade">
-          <h3>Baltimore Center Stage</h3>
-          <div class="image-right">
-            <div class="science-text"
-              <p>Launched in 1963 and located in the Mount Vernon Cultural District of Baltimore, Baltimore Center Stage has grown to become Baltimore’s premier and largest professional producing theater. The theatre group offers multiple plays and events, including a family series, however these programs only scratch the surface of the group’s amazing efforts in educating children. Programs such as the Young Playwrights Festival, Drama Club, and the Student Matinee series demonstrate the group’s dedication for inspiring imagination, creativity, and a passion for the arts among Baltimore’s youth.</p>
-            </div>
-            <img src="./pictures/6442.JPG" height=20% width=20%>
           </div>
         </div>
       </div>
+    </section>
+ <!-- Donate -->
+    <section id="donate">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Donate</h2>
+            <p class="section-subheading text-muted">Our mission is to create opportunities for enrichment, enjoyment, and communication to our clients, through the implementation of telepresence technology and programming. Additionally, we hope to promote innovation for new and profound avenues of human connection.
+            <br> Support us by donating below!</h3>
+        
+          </div>
+        </div>
+        <div class="row text-center">
+       
+          <div class="col-md-12">
+      <a class="btn btn-primary" href="href="https://www.strongcitybaltimore.org/donations/wego-foundation/" target="_blank" " role="button">Donate Now</a>
+          </div>
+        </div>
+         
+        
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; WeGo Project 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>-->
+        </div>
+      </div>
+    </footer>
 
-      <div id="contact-bar" class="blue">
-        <p>Additional comments and inquiries can be made to <strong>WeGoFoundation@gmail.com</strong></p>
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Illustration</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-</body>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Explore</li>
+                    <li>Category: Graphic Design</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Finish</li>
+                    <li>Category: Identity</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Lines</li>
+                    <li>Category: Branding</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Southwest</li>
+                    <li>Category: Website Design</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Window</li>
+                    <li>Category: Photography</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+  </body>
+
 </html>
